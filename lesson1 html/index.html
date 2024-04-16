@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lesson-1 html</title>
+	<style>
+		*{
+			margin: 0; padding: 0;
+			scroll-behavior: smooth;
+			font-family: Arial;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+		 
+		main {
+			flex:1;
+		 }
+		 
+		 header, footer {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 10px;
+			background-color: grey;
+		 }
+		 
+		 nav{
+			display:flex;
+			gap: 20px;
+		 }
+		 nav a {
+			color:brown;
+		 }
+
+		 .logo{
+			width:50px;
+			aspect-ratio: 1/1;
+			background-color: brown;
+			border-radius: 50%;
+		 }
+		 section {
+			height:80vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			color: white;
+			font-weight: bold;
+			background-color: brown;
+			border-bottom: 5px solid white;
+			
+		}
+		section:last-child {
+			border: none;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo"></div>
+		<nav>
+			<a href="#top">Главная</a>
+			<a href="#about">Обо мне</a>
+			<a href="#portfolio">Портфолио</a>
+			<a href="#contact">Контакты</a>
+		</nav>
+	</header>
+
+
+	<main>
+		<section id="about">Обо мне</section>
+		<section id="portfolio">Портфолио</section>
+		<section id="contact">Контакты</section>
+	</main>
+
+
+	<footer>
+		<div class="logo"></div>
+		<nav>
+			<a href="#top">Главная</a>
+			<a href="#about">Обо мне</a>
+			<a href="#portfolio">Портфолио</a>
+			<a href="#contact">Контакты</a>
+		</nav>
+	</footer>	
+</body>
+</html>
