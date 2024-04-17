@@ -10,10 +10,15 @@
 			scroll-behavior: smooth;
 			font-family: Arial;
 		}
+		img{
+			max-width: 400px;
+		}
 		body{
 			display: flex;
 			flex-direction: column;
 			height: 100vh;
+			min-width: 360px;
+			
 		}
 		 
 		main {
@@ -21,11 +26,13 @@
 		 }
 		 
 		 header, footer {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			padding: 10px;
+			padding: 10px 0;
 			background-color: grey;
+		 }
+		 header .container, footer .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		 }
 		 
 		 nav{
@@ -41,15 +48,14 @@
 			aspect-ratio: 1/1;
 			background-color: brown;
 			border-radius: 50%;
+			display:block;
 		 }
 		 section {
 			height:80vh;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-size: 40px;
 			color: white;
-			font-weight: bold;
 			background-color: brown;
 			border-bottom: 5px solid white;
 			
@@ -57,36 +63,85 @@
 		section:last-child {
 			border: none;
 		}
+		.container {
+			margin: 0 auto;
+			width: calc(min(100%, 800px) - 30px);
 
+		}
+	
+		h2{
+			margin-bottom: 30px;
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.about-info{
+			flex-wrap: wrap;
+			display:flex;
+			align-items: center;
+			gap:30px;
+
+		}
+		.about-info img{
+			margin: 0 auto;
+			border-radius:20px;
+			box-shadow: 5px 5px 20px #fff;
+			width: 300px; 
+		}
+
+		.about-info p {
+			flex: 1;
+			min-width: 300px;
+			max-width: 500px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
 
 
 	</style>
 </head>
 <body>
 	<header>
+		<div class="container">
 		<a href="" class="logo"></a>
 		<nav>
 			<a href="#about">Обо мне</a>
 			<a href="#portfolio">Портфолио</a>
 			<a href="#contact">Контакты</a>
 		</nav>
+	</div>
 	</header>
 
 
 	<main>
-		<section id="about">Обо мне</section>
+		<section id="about">
+			<div class="container">
+
+
+				<h2>Обо мне</h2>
+				<div class="about-info">
+					<img src="assets/1.jpg">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nesciunt aut veniam eos at accusantium necessitatibus aliquid amet iusto asperiores, provident sunt ab inventore, possimus sequi beatae maiores voluptatibus labore.</p>
+				</div>
+
+			</div>
+		</section>
 		<section id="portfolio">Портфолио</section>
 		<section id="contact">Контакты</section>
+	
 	</main>
 
-
 	<footer>
-		<a href="#top" class="logo"></a>
-		<nav>
-			<a href="#about">Обо мне</a>
-			<a href="#portfolio">Портфолио</a>
-			<a href="#contact">Контакты</a>
-		</nav>
+		<div class="container">
+			<a href="#top" class="logo"></a>
+			<nav>
+				<a href="#about">Обо мне</a>
+				<a href="#portfolio">Портфолио</a>
+				<a href="#contact">Контакты</a>
+			</nav>
+		</div>
 	</footer>	
 </body>
 </html>
