@@ -13,6 +13,9 @@ a {
 	color:currentColor;
 	text-decoration: none;
 }
+a:hover{
+	color: #7D4E25;
+}
 .container {
 	margin: 0 auto;
 	width:calc(100% - 40px);
@@ -94,11 +97,14 @@ z-index: -1;
 	font-size: 20px;
 	padding: 0px 20px;
 }
-.left-block button {
+.button {
+	display:flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: 70px;
 	font-size: 20px;
 	height:50px;
-	width:270px;
+	max-width: 270px;
 	background-color: #E4BA6A;
 	color:#F1EBD8;
 	border:none;
@@ -258,6 +264,10 @@ footer {
 .info-nav nav a {
 	color:#F1EBD8;
 	text-decoration: none;
+}
+nav a:hover {
+	color:#7D4E25;
+	transform: scale(1.5);
 }
 .container-five .info-nav p {
 	font-size:14px;
